@@ -1,0 +1,48 @@
+.grid-container {
+    display: grid;
+    grid-template-areas: 
+    'screen screen screen screen'
+    'AC plusOrMinus percentage division'
+    'seven eight nine into'
+    'four five six minus'
+    'one two three plus'
+    'zero zero decimal equalto';
+    
+    gap: 2px;
+    font-size: x-large;
+    border: 5px solid brown;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 250px;
+  }
+
+.grid-item{
+    display: flex;
+    border: 2px solid orangered;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.screen {grid-area: screen; padding: 50px;}
+.AC { grid-area: AC;}
+.plusOrMinus{ grid-area: plusOrMinus;}
+.percentage { grid-area: percentage;}
+.division { grid-area: division;}
+.seven { grid-area: seven;}
+.eight { grid-area: eight;}
+.nine { grid-area: nine;}
+.into { grid-area: into;}
+.four { grid-area: four;}
+.five { grid-area: five;}
+.six { grid-area: six;}
+.minus { grid-area: minus;}
+.one { grid-area: one;}
+.two { grid-area: two;}
+.three { grid-area: three;}
+.plus { grid-area: plus;}
+.zero { grid-area: zero;}
+.decimal { grid-area: decimal;}
+.equalto { grid-area: equalto;}
+
