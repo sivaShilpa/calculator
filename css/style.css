@@ -26,7 +26,7 @@
 }
 
 .screen {grid-area: screen; padding: 50px;}
-.AC { grid-area: AC;}
+.ac { grid-area: AC;}
 .plusOrMinus{ grid-area: plusOrMinus;}
 .percentage { grid-area: percentage;}
 .division { grid-area: division;}
