@@ -1,6 +1,7 @@
 /*----- constants -----*/
 
-
+let operators = /\+|\-|\/|\x/
+let digits = /[0-9]|\./
 
 /*----- state variables -----*/
 
@@ -80,7 +81,7 @@ function divisionElFunc(evt){
 
     if(current.tagName != 'DIV') return 
     else{
-        screenEl.textContent = '/'        
+        screenEl.textContent = screenEl.textContent + '/'        
     }
 }
 function sevenElFunc(evt){
@@ -88,7 +89,7 @@ function sevenElFunc(evt){
 
     if(current.tagName != 'DIV') return 
     else{
-        screenEl.textContent = '7'
+        screenEl.textContent = screenEl.textContent + '7'
     }
 }
 function eightElFunc(evt){
@@ -96,7 +97,7 @@ function eightElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '8'
+        screenEl.textContent = screenEl.textContent + '8'
     }
 }
 function nineElFunc(evt){
@@ -104,7 +105,7 @@ function nineElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '9'
+        screenEl.textContent = screenEl.textContent + '9'
     }
 }
 function intoElFunc(evt){
@@ -112,7 +113,7 @@ function intoElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '*'
+        screenEl.textContent = screenEl.textContent + 'x'
     }
 }
 function fourElFunc(evt){
@@ -120,7 +121,7 @@ function fourElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '4'
+        screenEl.textContent = screenEl.textContent + '4'
     }
 }
 function fiveElFunc(evt){
@@ -128,7 +129,7 @@ function fiveElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '5'
+        screenEl.textContent = screenEl.textContent + '5'
     }
 }
 function sixElFunc(evt){
@@ -136,7 +137,7 @@ function sixElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '6'
+        screenEl.textContent = screenEl.textContent + '6'
     }
 }
 function minusElFunc(evt){
@@ -144,7 +145,7 @@ function minusElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '-'
+        screenEl.textContent = screenEl.textContent + '-'
     }
 }
 function oneElFunc(evt){
@@ -152,7 +153,7 @@ function oneElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '1'
+        screenEl.textContent = screenEl.textContent + '1'
     }
 }
 function twoElFunc(evt){
@@ -160,7 +161,7 @@ function twoElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '2'
+        screenEl.textContent = screenEl.textContent + '2'
     }
 }
 function threeElFunc(evt){
@@ -168,7 +169,7 @@ function threeElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '3'
+        screenEl.textContent = screenEl.textContent + '3'
     }
 }
 function plusElFunc(evt){
@@ -176,7 +177,7 @@ function plusElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '+'
+        screenEl.textContent = screenEl.textContent + '+'
     }
 }
 function zeroElFunc(evt){
@@ -184,7 +185,7 @@ function zeroElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '0'
+        screenEl.textContent = screenEl.textContent + '0'
     }
 }
 function decimalElFunc(evt){
@@ -192,7 +193,7 @@ function decimalElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '.'
+        screenEl.textContent = screenEl.textContent + '.'
     }
 }
 function equaltoElFunc(evt){
@@ -200,8 +201,28 @@ function equaltoElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = '='
+        let temp = screenEl.textContent
+        let numArr = temp.split(operators)
+        let tempArr = temp.split(digits)
+        tempArr = tempArr.join("").split("")
+        let numOfOprtrs = tempArr.length
+        let calculationArr = []
+        
+        numArr.forEach((el, i)=>{
+            if(el === ''){
+                calculationArr.push(tempArr[i])
+            }else if(i<numOfOprtrs){
+                calculationArr.push(el)
+                calculationArr.push(tempArr[i])
+            }else{
+                calculationArr.push(el)
+            }
+           
+        })      
+        screenEl.textContent = eval(calculationArr.join(""))
     }
+
+    
 }
 
 
