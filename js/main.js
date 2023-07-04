@@ -66,8 +66,30 @@ function plusOrMinusElFunc(evt){
         else screenEl.textContent = '+'
     }
 }
+function percentageElFunc(evt){
+    let current = evt.target
+    if(current.tagName != 'DIV') return 
+    else{
+        let temp = parseInt(screenEl.textContent)
+        screenEl.textContent = (temp/100).toString()
+    }
+}
+function divisionElFunc(evt){
+    let current = evt.target
 
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = '/'        
+    }
+}
+function sevenElFunc(evt){
+    let current = evt.target
 
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = '7'
+    }
+}
 // function handleClick(evt) {
 //     let currentButton = evt.target
 
