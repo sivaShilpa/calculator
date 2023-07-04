@@ -54,7 +54,7 @@ function aCElFunc(evt){
 
     if(current.tagName != 'DIV') return 
     else{
-        screenEl.textContent = '0'
+        screenEl.textContent = ''
     }
 }
 function plusOrMinusElFunc(evt){
@@ -62,8 +62,9 @@ function plusOrMinusElFunc(evt){
 
     if(current.tagName != 'DIV') return 
     else{
-        if(screenEl.textContent == '+')screenEl.textContent = '-'
-        else screenEl.textContent = '+'
+        let temp = parseInt(screenEl.textContent)
+        if(temp > 0){screenEl.textContent = '-'+Math.abs(temp).toString()}
+        else if(temp < 0) {screenEl.textContent = '+'+Math.abs(temp).toString()}
     }
 }
 function percentageElFunc(evt){
