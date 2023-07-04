@@ -49,6 +49,24 @@ equaltoEl.addEventListener('click', equaltoElFunc)
 
 /*----- event listeners -----*/
 
+function aCElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = '0'
+    }
+}
+function plusOrMinusElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = '-'
+    }
+}
+
+
 // function handleClick(evt) {
 //     let currentButton = evt.target
 
