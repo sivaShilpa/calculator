@@ -62,7 +62,8 @@ function plusOrMinusElFunc(evt){
 
     if(current.tagName != 'DIV') return 
     else{
-        screenEl.textContent = '-'
+        if(screenEl.textContent == '+')screenEl.textContent = '-'
+        else screenEl.textContent = '+'
     }
 }
 
