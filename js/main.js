@@ -90,6 +90,121 @@ function sevenElFunc(evt){
         screenEl.textContent = '7'
     }
 }
+function eightElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '8'
+    }
+}
+function nineElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '9'
+    }
+}
+function intoElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '*'
+    }
+}
+function fourElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '4'
+    }
+}
+function fiveElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '5'
+    }
+}
+function sixElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '6'
+    }
+}
+function minusElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '-'
+    }
+}
+function oneElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '1'
+    }
+}
+function twoElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '2'
+    }
+}
+function threeElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '3'
+    }
+}
+function plusElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '+'
+    }
+}
+function zeroElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '0'
+    }
+}
+function decimalElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '.'
+    }
+}
+function equaltoElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return
+    else{
+        screenEl.textContent = '='
+    }
+}
+
+
+
 // function handleClick(evt) {
 //     let currentButton = evt.target
 
