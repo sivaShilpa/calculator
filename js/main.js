@@ -113,7 +113,7 @@ function intoElFunc(evt){
 
     if(current.tagName != 'DIV') return
     else{
-        screenEl.textContent = screenEl.textContent + 'x'
+        screenEl.textContent = screenEl.textContent + '*'
     }
 }
 function fourElFunc(evt){
