@@ -1,6 +1,6 @@
 /*----- constants -----*/
 
-let operators = /\+|\-|\/|\x/
+let operators = /\+|\-|\/|\*/
 let digits = /[0-9]|\./
 
 /*----- state variables -----*/
@@ -220,9 +220,7 @@ function equaltoElFunc(evt){
            
         })      
         screenEl.textContent = eval(calculationArr.join(""))
-    }
-
-    
+    }    
 }
 
 
