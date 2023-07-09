@@ -48,11 +48,19 @@
 .decimal { grid-area: decimal;}
 .equalto { grid-area: equalto;}
 
-sup {
-  vertical-align: super;
-  font-size: x-small;
+.smallSup{
+  font-size: small;
+  vertical-align: text-top;
 }
-sub {
-  vertical-align: text-bottom;
+.smallerSup{
   font-size: x-small;
+  vertical-align: text-top;
+}
+.smallSub{
+  font-size: small;
+  vertical-align:text-bottom;
+}
+.smallerSub {  
+  font-size: x-small;
+  vertical-align:text-bottom;
 }
