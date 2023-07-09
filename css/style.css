@@ -9,7 +9,7 @@
     'leftParan rightParan mc mPlus mMinus mr AC plusOrMinus percentage division'
     'second xSquared xCubed xRaisedToY eRaisedToX tenRaisedToX seven eight nine into'
     'oneByX squareRootOfX cubeRootOfX YRootOfX ln logToBaseTen four five six minus'
-    'xFactorial sine cos tan e EE one two three plus'
+    'xFactorial sine cos tanSign e EE one two three plus'
     'degree sineH cosH tanH pie rand zero zero decimal equalto';    
     gap: 2px;    
     border: 5px solid brown;
@@ -28,22 +28,56 @@
 }
 
 .screen {grid-area: screen; padding: 50px;}
+.leftParen{ grid-area: leftParen;}
+.rightParen{ grid-area: rightParen;}
+.mc{ grid-area: mc; }
+.mPlus{ grid-area: mPlus}
+.mMinus{ grid-area: mMinus;}
+.mr{ grid-area: mr;}
 .ac { grid-area: AC;}
 .plusOrMinus{ grid-area: plusOrMinus;}
 .percentage { grid-area: percentage;}
 .division { grid-area: division;}
+
+.second{ grid-area: second;}
+.xSquared{ grid-area: xSquared;}
+.xCubed{ grid-area: xCubed;}
+.xRaisedToY{ grid-area: xRaisedToY;}
+.eRaisedToX{ grid-area: eRaisedToX;}
+.tenRaisedToX{ grid-area: tenRaisedToX;}
 .seven { grid-area: seven;}
 .eight { grid-area: eight;}
 .nine { grid-area: nine;}
 .into { grid-area: into;}
+
+.oneByX{ grid-area: oneByX;}
+.squareRootOfX{ grid-area: squareRootOfX;}
+.cubeRootOfX{ grid-area: cubeRootOfX;}
+.YRootOfX{ grid-area: YRootOfX;}
+.ln{ grid-area: ln;}
+.logToBaseTen{ grid-area: logToBaseTen;}
 .four { grid-area: four;}
 .five { grid-area: five;}
 .six { grid-area: six;}
 .minus { grid-area: minus;}
+
+.xFactorial{ grid-area: xFactorial;}
+.sine{ grid-area: sine;}
+.cos{ grid-area: cos;}
+.tanSign{ grid-area: tanSign;}
+.e{ grid-area: e;}
+.EE{ grid-area: EE;}
 .one { grid-area: one;}
 .two { grid-area: two;}
 .three { grid-area: three;}
 .plus { grid-area: plus;}
+
+.degree{ grid-area: degree;}
+.sineH{ grid-area: sineH; }
+.cosH{ grid-area: cosH;}
+.tanH{ grid-area: tanH;}
+.pie{ grid-area: pie; color: black;}
+.rand{ grid-area: rand;}
 .zero { grid-area: zero;}
 .decimal { grid-area: decimal;}
 .equalto { grid-area: equalto;}

@@ -8,26 +8,62 @@ let digits = /[0-9]|\./
 
 /*----- cached elements  -----*/
 const screenEl = document.querySelector('.screen')
+
+const leftParanEl = document.querySelector('.leftParan')
+const rightParanEl = document.querySelector('.rightParan')
+const mcEl = document.querySelector('.mc')
+const mPlusEl = document.querySelector('.mPlus')
+const mMinusEl = document.querySelector('.mMinus')
+const mrEl = document.querySelector('.mr')
 const aCEl = document.querySelector('.ac')
 const plusOrMinusEl = document.querySelector('.plusOrMinus')
 const percentageEl = document.querySelector('.percentage')
 const divisionEl = document.querySelector('.division')
+
+const secondEl = document.querySelector('.second')
+const xSquaredEl = document.querySelector('.xSquared')
+const xCubedEl = document.querySelector('xCubed')
+const xRaisedToYEl = document.querySelector('.xRaisedToY')
+const eRaisedToXEl = document.querySelector('.eRaisedToX')
+const tenRaisedToXEl = document.querySelector('.tenRaisedToX')
 const sevenEl = document.querySelector('.seven')
 const eightEl = document.querySelector('.eight')
 const nineEl = document.querySelector('.nine')
 const intoEl = document.querySelector('.into')
+
+const oneByXEl = document.querySelector('.oneByX')
+const squareRootOfXEl = document.querySelector('.squareRootOfX')
+const cubeRootOfXEl = document.querySelector('.cubeRootOfX')
+const YRootOfXEl = document.querySelector('.YRootOfX')
+const lnEl = document.querySelector(".ln")
+const logToBaseTenEl = document.querySelector('.logToBaseTen')
 const fourEl = document.querySelector('.four')
 const fiveEl = document.querySelector('.five')
 const sixEl = document.querySelector('.six')
 const minusEl = document.querySelector('.minus')
+
+const xFactorialEl = document.querySelector(".xFactorial")
+const sineEl = document.querySelector('.sine')
+const cosEl = document.querySelector('.cos')
+const tanSignEl = document.querySelector('.tanSign')
+const eEl = document.querySelector('.e')
+const EEEL = document.querySelector('.EE')
 const oneEl = document.querySelector('.one')
 const twoEl = document.querySelector('.two')
 const threeEl = document.querySelector('.three')
 const plusEl = document.querySelector('.plus')
+
+const degreeEl = document.querySelector('.degree')
+const sineHEl = document.querySelector('.sineH')
+const cosHEl = document.querySelector('.cosH')
+const tanHEl = document.querySelector('.tanH')
+const pieEl = document.querySelector('.pie')
+const randEl = document.querySelector('.rand')
 const zeroEl = document.querySelector('.zero')
 const decimalEl = document.querySelector('.decimal')
 const equaltoEl = document.querySelector('.equalto')
 
+leftParanEl.addEventListener('click', leftParanFunc)
 aCEl.addEventListener('click', aCElFunc)
 plusOrMinusEl.addEventListener('click', plusOrMinusElFunc)
 percentageEl.addEventListener('click', percentageElFunc)
@@ -49,7 +85,14 @@ decimalEl.addEventListener('click', decimalElFunc)
 equaltoEl.addEventListener('click', equaltoElFunc)
 
 /*----- event listeners -----*/
+function leftParanFunc(evt){
+    let current = evt.target
 
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = screenEl.textContent + '('        
+    }
+}
 function aCElFunc(evt){
     let current = evt.target
 
