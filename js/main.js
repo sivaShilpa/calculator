@@ -1,10 +1,10 @@
 /*----- constants -----*/
 
-let operators = /\+|\-|\/|\*/
-let digits = /[0-9]|\./
+let operators = /\+|\-|\/|\*|\(|\)/
+let digits = /[0-9]+|\./
 
 /*----- state variables -----*/
-
+let memory = 0
 
 /*----- cached elements  -----*/
 const screenEl = document.querySelector('.screen')
@@ -74,45 +74,45 @@ plusOrMinusEl.addEventListener('click', plusOrMinusElFunc)
 percentageEl.addEventListener('click', percentageElFunc)
 divisionEl.addEventListener('click', divisionElFunc)
 
-secondEl.addEventListener('click', secondElFunc)
-xSquaredEl.addEventListener('click', xSquaredElFunc)
-xCubedEl.addEventListener('click', xCubedElFunc)
-xRaisedToYEl.addEventListener('click', xRaisedToYElFunc)
-eRaisedToXEl.addEventListener('click', eRaisedToXElFunc)
-tenRaisedToXEl.addEventListener('click', tenRaisedToXElFunc)
+// secondEl.addEventListener('click', secondElFunc)
+// xSquaredEl.addEventListener('click', xSquaredElFunc)
+// xCubedEl.addEventListener('click', xCubedElFunc)
+// xRaisedToYEl.addEventListener('click', xRaisedToYElFunc)
+// eRaisedToXEl.addEventListener('click', eRaisedToXElFunc)
+// tenRaisedToXEl.addEventListener('click', tenRaisedToXElFunc)
 sevenEl.addEventListener('click', sevenElFunc)
 eightEl.addEventListener('click', eightElFunc)
 nineEl.addEventListener('click', nineElFunc)
 intoEl.addEventListener('click', intoElFunc)
 
-oneByXEl.addEventListener('click', oneByXElFunc)
-squareRootOfXEl.addEventListener('click',squareRootOfXElFunc)
-cubeRootOfXEl.addEventListener('click', cubeRootOfXElFunc)
-YRootOfXEl.addEventListener('click', YRootOfXElFunc)
-lnEl.addEventListener('click', lnElFunc)
-logToBaseTenEl.addEventListener('click', logToBaseTenElFunc)
+// oneByXEl.addEventListener('click', oneByXElFunc)
+// squareRootOfXEl.addEventListener('click',squareRootOfXElFunc)
+// cubeRootOfXEl.addEventListener('click', cubeRootOfXElFunc)
+// YRootOfXEl.addEventListener('click', YRootOfXElFunc)
+// lnEl.addEventListener('click', lnElFunc)
+// logToBaseTenEl.addEventListener('click', logToBaseTenElFunc)
 fourEl.addEventListener('click', fourElFunc)
 fiveEl.addEventListener('click', fiveElFunc)
 sixEl.addEventListener('click', sixElFunc)
 minusEl.addEventListener('click', minusElFunc)
 
-xFactorialEl.addEventListener('click', xFactorialElFunc)
-sineEl.addEventListener('click', sineElFunc)
-cosEl.addEventListener('click', cosElFunc)
-tanSignEl.addEventListener('click', tanSignElFunc)
-eEl.addEventListener('click', eElFunc)
-EEEL.addEventListener('click', EEELFunc)
+// xFactorialEl.addEventListener('click', xFactorialElFunc)
+// sineEl.addEventListener('click', sineElFunc)
+// cosEl.addEventListener('click', cosElFunc)
+// tanSignEl.addEventListener('click', tanSignElFunc)
+// eEl.addEventListener('click', eElFunc)
+// EEEL.addEventListener('click', EEELFunc)
 oneEl.addEventListener('click', oneElFunc)
 twoEl.addEventListener('click', twoElFunc)
 threeEl.addEventListener('click', threeElFunc)
 plusEl.addEventListener('click', plusElFunc)
 
-degreeEl.addEventListener('click', degreeElFunc)
-sineHEl.addEventListener('click', sineHElFunc)
-cosHEl.addEventListener('click', cosHElFunc)
-tanHEl.addEventListener('click', tanHElFunc)
-pieEl.addEventListener('click', pieElFunc)
-randEl.addEventListener('click', randElFunc)
+// degreeEl.addEventListener('click', degreeElFunc)
+// sineHEl.addEventListener('click', sineHElFunc)
+// cosHEl.addEventListener('click', cosHElFunc)
+// tanHEl.addEventListener('click', tanHElFunc)
+// pieEl.addEventListener('click', pieElFunc)
+// randEl.addEventListener('click', randElFunc)
 zeroEl.addEventListener('click', zeroElFunc)
 decimalEl.addEventListener('click', decimalElFunc)
 equaltoEl.addEventListener('click', equaltoElFunc)
@@ -125,6 +125,47 @@ function leftParanFunc(evt){
     else{
         screenEl.textContent = screenEl.textContent + '('        
     }
+}
+function rightParanFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = screenEl.textContent + ')'        
+    }
+}
+function mcElFunc(evt){
+    let current = evt.target
+
+    if(current.tagName != 'DIV') return 
+    else{
+        memory = []        
+    }
+}
+function mPlusElFunc(evt){
+    let current = evt.target
+    if(current.tagName != 'DIV') return 
+    else{
+        if((digits).test(screenEl.textContent)){
+            memory = screenEl.textContent
+        }        
+    }
+}
+function mMinusElFunc(evt){
+    let current = evt.target
+    if(current.tagName != 'DIV') return 
+    else{
+        if((digits).test(screenEl.textContent)){
+            memory = -screenEl.textContent
+        }        
+    }
+}
+function mrElFunc(evt){
+    let current = evt.target
+    if(current.tagName != 'DIV') return 
+    else{
+        screenEl.textContent = memory
+    } 
 }
 function aCElFunc(evt){
     let current = evt.target
